@@ -1,8 +1,19 @@
 <?php
 
+session_start();
 
 // Valider les deux champs
 // S'il y a des erreurs, on redirige vers la page du formulaire, en mémorisant le temps d'une requete les erreurs et les anciennes données
+
+
+if (!is_null($_SESSION['errors'])){
+    $_SESSION['old'] = $_REQUEST;
+    header('Location: /index.php');
+    exit;
+}
+
+
+
 //Assurer le rendu récapitulatif des données soumises
 
 
