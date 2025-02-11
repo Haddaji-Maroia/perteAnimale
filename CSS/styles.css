@@ -14,3 +14,32 @@ legend{
 fieldset{
     margin-bottom: 10px;
 }
+
+.fill-light-div{
+    background: #ECECEC;
+}
+
+.fill-dark-div{
+    background: #ADADAD;
+}
+
+div{
+    padding: 10px;
+}
+
+button{
+    background: #006400;
+    padding: 5px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+}
+
+select{
+    background: #8283D1;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    width: 320px;
+}

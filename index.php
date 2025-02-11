@@ -18,7 +18,7 @@
     <form action="/process.php" method="post">
     <fieldset> 
         <legend>Vos coordonnées</legend>
-        <div class="email">
+        <div class="email fill-light-div">
             <label for="email">Email</label>
             <input type="email"
                    name="email"
@@ -48,11 +48,11 @@
         <?php if (isset($_SESSION['errors']['vemail'])): ?>
             <div><p><?= $_SESSION['errors']['vemail'] ?></p></div>
         <?php endif; ?>
-        <div class="telephone">
+        <div class="telephone fill-light-div">
             <label for="number">Téléphone</label>
             <input type="text" name="number" id="number" placeholder="0499 10 10 10">
         </div>
-        <div class="pays">
+        <div class="pays fill-light-div">
             <label for="pays">Pays</label>
             <select name="pays" id="pays">
                 <option value="Belgique">Belgique</option>
@@ -64,7 +64,7 @@
     </fieldset>
         <fieldset>
             <legend>Description de l'animal perdu</legend>
-            <div class="typeAnimal">
+            <div class="typeAnimal fill-light-div">
                 <label for="typeAnimal">Type d'animal</label>
                 <select name="typeAnimal" id="typeAnimal">
                     <option value="">Chien</option>
@@ -77,11 +77,11 @@
                 <label for="nom">Nom de l'animal</label>
                 <input type="text" name="nom" id="nom">
             </div>
-            <div class="puce">
+            <div class="puce fill-light-div">
                 <label for="puce">Puce (obligatoire si chien)</label>
                 <input type="text" name="puce" id="puce">
             </div>
-            <div class="sexe">
+            <div class="sexe fill-light-div">
                 <label for="sexe">sexe</label>
                     <input type="radio" name="sexe" id="male" value="male">
                     <label for="sexeM">Male</label>
@@ -89,7 +89,7 @@
                     <input type="radio" name="sexe" id="femelle" value="femelle">
                     <label for="sexeF">Femelle</label>
             </div>
-            <div class="age">
+            <div class="age fill-light-div">
                 <label for="age">Age (estimation)</label>
                 <input type="text" name="age" id="age">
             </div>
@@ -97,7 +97,7 @@
                 <label for="race">Race</label>
                 <input type="text" name="race" id="race">
             </div>
-            <div class="tattoo">
+            <div class="tattoo fill-light-div">
                 <label for="tattoo">Tatouage</label>
                 <select name="tattoo" id="tattoo">
                     <option value="OreilleG">Oreille gauche</option>
@@ -112,14 +112,14 @@
                 <label for="desciption">Description / Signes particuliers</label>
                 <textarea name="description" id="desciption" cols="30" rows="10"></textarea>
             </div>
-            <div class="photo">
+            <div class="photo fill-light-div">
                 <label for="photo">Photo de l'animal</label>
                 <input type="text" name="photo" id="photo">
             </div>
         </fieldset>
         <fieldset>
             <legend>Date et localité de la perte</legend>
-            <div class="date">
+            <div class="date fill-light-div">
                 <label for="date">Date</label>
                 <input type="date" name="date" id="date">
             </div>
@@ -127,7 +127,7 @@
                 <label for="heure">Heure</label>
                 <input type="time">
             </div>
-            <div class="codePostal">
+            <div class="codePostal fill-light-div">
                 <label for="codeP">Code postal</label>
                 <input type="text" name="codeP" id="codeP">
             </div>
