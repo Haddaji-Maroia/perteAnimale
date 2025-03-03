@@ -50,8 +50,21 @@
         <?php endif; ?>
         <div class="telephone fill-light-div">
             <label for="number">Téléphone</label>
-            <input type="text" name="number" id="number" placeholder="0499 10 10 10">
+            <input type="tel"
+                   name="phone"
+                   id="phone"
+                <?php
+                if (isset($_SESSION['old']['phone'])): ?>
+                    value="<?= $_SESSION['old']['phone'] ?>"
+                <?php
+                endif;    ?>
+            >
         </div>
+        <?php
+        if (isset($_SESSION['errors']['phone'])): ?>
+            <div><p><?= $_SESSION['errors']['phone'] ?></p></div>
+        <?php
+        endif; ?>
         <div class="pays fill-light-div">
             <label for="pays">Pays</label>
             <select name="pays" id="pays">
