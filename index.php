@@ -74,6 +74,11 @@
                 <option value="Italie">Italie</option>
             </select>
         </div>
+        <?php
+        if (isset($_SESSION['errors']['pays'])): ?>
+            <div><p><?= $_SESSION['errors']['pays'] ?></p></div>
+        <?php
+        endif; ?>
     </fieldset>
         <fieldset>
             <legend>Description de l'animal perdu</legend>
