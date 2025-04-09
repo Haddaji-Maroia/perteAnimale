@@ -1,7 +1,10 @@
 <?php
-    session_start() ?>
+    session_start() ;
+
+$countries = require './config/countries.php';
 
 
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -68,10 +71,10 @@
         <div class="pays fill-light-div">
             <label for="pays">Pays</label>
             <select name="pays" id="pays">
-                <option value="Belgique">Belgique</option>
-                <option value="France">France</option>
-                <option value="Espagne">Espagne</option>
-                <option value="Italie">Italie</option>
+                <?php foreach ($countries as $code => $name): ?>
+                <option value="<?= $code ?>"><?= $name ?></option>
+            <?php
+            endforeach; ?>
             </select>
         </div>
         <?php
