@@ -1,6 +1,8 @@
 <?php
 
+session_start();
 
+$countries = require './config/conutries.php';
 
 /*
  * Valider les deux champs
@@ -24,6 +26,14 @@ if (array_key_exists('vemail', $_REQUEST)) {
 } else {
     $_SESSION['errors']['email'] = 'L’email de confirmation est requis';
 }
+
+if(array_key_exists('country', $_REQUEST)){
+    if(!array_key_exists($_REQUEST['country'], $countries)){
+        $_SESSION['errors']['country'] = 'Le pays sélectionné n est pas pris en charge par notre application'; 
+    }
+}
+
+
 
 
 /*
