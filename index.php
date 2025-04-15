@@ -71,9 +71,15 @@ $countries = require './config/countries.php';
         endif; ?>
         <div class="pays fill-light-div">
             <label for="pays">Pays</label>
-            <select name="pays" id="pays">
+            <select name="country" id="country">
                 <?php foreach ($countries as $code => $name): ?>
-                <option value="<?= $code ?>"><?= $name ?></option>
+                <option value="<?= $code ?>"
+                <?php 
+                if (isset($_SESSION['old']['country']) && $code === $_SESSION['old']['country']): ?> 
+                    selected
+                <?php 
+                    endif; ?>
+                ><?= $name ?></option>
             <?php
             endforeach; ?>
             </select>
